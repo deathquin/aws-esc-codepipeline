@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - REPOSITORY_URI=482825264322.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-pipline-demo:latest
+      - REPOSITORY_URI=482825264322.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-pipline-demo
       - REPOSITORY_NAME=ecs-pipline-demo
       - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 482825264322.dkr.ecr.ap-northeast-2.amazonaws.com
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
