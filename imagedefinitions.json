@@ -2,7 +2,7 @@
   "family": "FargateSampleStackfargateSampleServiceTaskDefE9CB3C64",
   "containerDefinitions": [{
       "name": "web",
-      "image": "482825264322.dkr.ecr.ap-northeast-2.amazonaws.com/demo-repository:latest",
+      "image": "482825264322.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-pipline-demo:latest",
       "portMappings": [{
           "containerPort": 80,
           "hostPort": 80,
