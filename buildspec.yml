@@ -1,6 +1,9 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -22,5 +25,6 @@ phases:
       - printf '[{"name":"serviceTaskContainerDefinition","imageUri":"%s"}]' ${REPOSITORY_URI}:latest > imagedefinitions.json #name change
 artifacts:
   files:
-    - imagedefinitions.json
-    - appspec.yaml
+    - "**/*"
+    #- imagedefinitions.json
+    #- appspec.yaml #files: ["**/*"]
