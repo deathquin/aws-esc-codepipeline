@@ -1,0 +1,6 @@
+[
+  {
+    "name":"serviceTaskContainerDefinition",
+    "imageUri":"482825264322.dkr.ecr.ap-northeast-2.amazonaws.com/ecs-test:latest1"
+  }
+]

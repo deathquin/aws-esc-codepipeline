@@ -23,8 +23,8 @@ phases:
       - docker push ${REPOSITORY_URI}:latest
       - echo Writing image definitions file...
       - printf '[{"name":"serviceTaskContainerDefinition","imageUri":"%s"}]' ${REPOSITORY_URI}:latest > imagedefinitions.json #name change
+      - cat imagedefinitions.json
 artifacts:
   files:
-    - "**/*"
-    #- imagedefinitions.json
-    #- appspec.yaml #files: ["**/*"]
+    - imagedefinitions.json
+    - appspec.yaml #files: ["**/*"]
